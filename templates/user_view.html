@@ -1,0 +1,19 @@
+{% extends 'base.html'%}
+{% block content %}
+<a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><header class="d-flex justify-content-center py-3">
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="{%url 'schedules'%}" class="nav-link">Schedules</a></li>
+
+      </ul>
+    </header><use xlink:href="#bootstrap"></use></svg>
+      </a>
+<ul>
+    <li>
+        <h2>{{user_view.username}}</h2>
+
+    <li>Email: {{user_view.email }}</li>
+    <hr>
+
+</ul>
+{% endblock %}
