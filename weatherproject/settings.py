@@ -141,4 +141,6 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #CELERY_BROKER_URL = 'amqp://guest:guest@localhost:5672/guest'
 CELERY_BROKER_URL = 'amqps://oqwaqhqq:3ceZs8DV5I5-3AONb79DVivNRP8wiP82@whale.rmq.cloudamqp.com/oqwaqhqq'
+CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
+
 django_heroku.settings(locals())
