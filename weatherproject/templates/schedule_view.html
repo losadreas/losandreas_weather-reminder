@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+{% block content %}
+
+<a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><header class="d-flex justify-content-center py-3">
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="{%url 'schedule_add'%}" class="nav-link">Add schedule</a></li>
+        <li class="nav-item"><a href="{%url 'home'%}" class="nav-link">Home</a></li>
+      </ul>
+    </header><use xlink:href="#bootstrap"></use></svg>
+      </a>
+<ul>
+    {% for forecast in forecasts %}
+    <li>
+        <h2>City: {{forecast.city}}</h2>
+</li>
+    <li>period: {{forecast.period }} hrs</li>
+    <li><p class="link-read-post"><a href="{% url 'schedule_delete' forecast.pk %}">Delete schedule</a> </p>
+    <hr>
+    {% endfor %}
+</ul>
+{% endblock %}
