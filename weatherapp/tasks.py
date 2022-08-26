@@ -31,5 +31,5 @@ def send_email(**kwargs):
         country = list_data['sys']['country']
         message = f'Weather in {city}|{country} temperature: {temp}, humidity: {humidity}, max temperature: {temp_max} ,' \
                   f'mix temperature: {temp_min}, {weather}'
-        email = EmailMessage('Forecast subscribe', message, from_email='losandreas-insta@mail.com', to=forecast_dict[city])
+        email = EmailMessage('Forecast subscribe', message, from_email='losandreas-insta@ukr.net', to=forecast_dict[city])
         email.send()
